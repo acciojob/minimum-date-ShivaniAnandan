@@ -1,5 +1,19 @@
 function minDate(dates) {
   //write you code here
+	if (!Array.isArray(dates) || dates.length === 0) {
+    return null; // Return null for invalid input or an empty array.
+  }
+
+  // Initialize with the first date as the minimum date.
+  let minDate = dates[0];
+
+  for (let i = 1; i < dates.length; i++) {
+    if (dates[i] < minDate) {
+      minDate = dates[i];
+    }
+  }
+
+  return minDate;
 }
 
 // Do not change the code
